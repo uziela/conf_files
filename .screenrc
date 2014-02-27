@@ -1,0 +1,24 @@
+# Set some basic options
+vbell off             # Disable the visual bell.
+startup_message off   # Disable startup messages.
+autodetach on         # Autodetach session on hangup.
+shell -$SHELL         # Set the default shell.
+shelltitle bash       # Set the title of all shell windows.
+defscrollback 512     # Set the default number of scrollback lines.
+
+# My options
+term xterm
+silencewait 5
+
+# Windows
+#bindkey "^[q" prev    # ALT+Q changes to the previous window.
+#bindkey "^[w" next    # ALT+W changes to the next window.
+#bindkey "^[c" screen  # ALT+C starts a new window
+bindkey "^w" prev    # CTRL+w changes to the previous window.
+bindkey "^e" next    # CTRL+e changes to the next window.
+bindkey "^t" screen  # CTRL+t starts a new window
+
+
+# Hardstatus line
+hardstatus alwayslastline '%{= M}%H%{= G} %l %= %{= w}%-w%{+b r}%n*%t%{-b r}%{w}%+w %= %{c}%d %D %{B}%c'
+
