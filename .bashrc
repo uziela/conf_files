@@ -20,7 +20,7 @@ PATH=$PATH:/scratch3/uziela/software/clustalo
 PATH=$PATH:/scratch3/uziela/Nanjiang-scripts
 export PATH
 
-export HISTSIZE=100000
+export HISTSIZE=1000000
 
 #export WORKON_HOME=$HOME/.virtualenvs
 #source /usr/local/bin/virtualenvwrapper.sh
