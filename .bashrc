@@ -21,6 +21,7 @@ PATH=$PATH:/scratch3/uziela/Nanjiang-scripts
 export PATH
 
 export HISTSIZE=1000000
+export HISTFILESIZE=1000000000
 
 #export WORKON_HOME=$HOME/.virtualenvs
 #source /usr/local/bin/virtualenvwrapper.sh
