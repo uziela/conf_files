@@ -33,9 +33,19 @@ export BLASTDB
 #set MOLBROWSERPROHOME="/scratch3/uziela/software/icm-browser-pro-3.7-3b/"
 #export MOLBROWSERPROHOME
 
-shopt -s histappend
+#shopt -s histappend
 #PROMPT_COMMAND="$PROMPT_COMMAND; history -a; history -n"
 #export PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; history -c; history -r"
-export PROMPT_COMMAND="history -a; history -c; history -r; ${PROMPT_COMMAND}"
+#export PROMPT_COMMAND="history -a; history -c; history -r; ${PROMPT_COMMAND}"
 
 export LC_ALL="en_US.UTF-8"
+
+
+# Avoid duplicates
+HISTCONTROL=ignoredups:erasedups # Ubuntu default is ignoreboth
+# When the shell exits, append to the history file instead of overwriting it
+shopt -s histappend  # In Ubuntu this is already set by default
+
+# After each command, append to the history file and reread it
+PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; history -c; history -r"
+
