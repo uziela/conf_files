@@ -27,4 +27,4 @@ shopt -s histappend  # In Ubuntu this is already set by default
 PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; history -c; history -r"
 
 alias watcht='watch -n 0.1 tail'
-alias watcht='watch -n 0.1 nvidia-smi'
+alias watchn='watch -n 0.1 nvidia-smi'
